@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gallery and media — Nobel Prize ceremonies, photographs, and videos." />
+  <title>Gallery & Media — Nobel Prize E-Project</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <div id="page-overlay" class="active" aria-hidden="true"></div>
+  <div id="nav-placeholder"></div>
+
+  <!-- ── PAGE HERO ── -->
+  <header class="page-hero" aria-label="Page header">
+    <div class="hero-particles" aria-hidden="true"></div>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,.7);">Gallery</span>
+    </div>
+    <div class="page-hero-tag">📸 Visual Archive</div>
+    <h1>Gallery <em>&amp; Media</em></h1>
+    <p>Photographs, videos, and iconic moments from Nobel Prize history and its remarkable laureates.</p>
+  </header>
+
+  <!-- ── PHOTO GALLERY ── -->
+  <section class="section" aria-labelledby="photos-heading">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Photography</span>
+        <h2 class="section-title" id="photos-heading">Historic Photographs</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Click any image to view it in full size.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center;margin:2rem 0;" role="tablist"
+        aria-label="Gallery filter">
+        <button class="gallery-filter active" data-filter="all" role="tab" aria-selected="true"
+          style="padding:.5rem 1.25rem;border-radius:50px;border:2px solid var(--gold);background:var(--gold);color:var(--navy);font-weight:700;font-size:.85rem;cursor:pointer;transition:all .3s;">
+          All
+        </button>
+        <button class="gallery-filter" data-filter="scientists" role="tab" aria-selected="false"
+          style="padding:.5rem 1.25rem;border-radius:50px;border:2px solid var(--cream-dark);background:transparent;color:var(--text-main);font-weight:700;font-size:.85rem;cursor:pointer;transition:all .3s;">
+          Scientists
+        </button>
+        <button class="gallery-filter" data-filter="ceremony" role="tab" aria-selected="false"
+          style="padding:.5rem 1.25rem;border-radius:50px;border:2px solid var(--cream-dark);background:transparent;color:var(--text-main);font-weight:700;font-size:.85rem;cursor:pointer;transition:all .3s;">
+          Ceremonies
+        </button>
+        <button class="gallery-filter" data-filter="labs" role="tab" aria-selected="false"
+          style="padding:.5rem 1.25px;border-radius:50px;border:2px solid var(--cream-dark);background:transparent;color:var(--text-main);font-weight:700;font-size:.85rem;cursor:pointer;transition:all .3s;">
+          Laboratories
+        </button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+
+        <div class="gallery-item" data-category="scientists">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ1QizgaSqRDqhj9OKchjLBaBkxw_9QkWKfg&s"
+            alt="Albert Einstein portrait" loading="lazy" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Albert Einstein — Nobel Laureate, Physics 1921</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="scientists">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB9sFb7dwsiOSCxqsp-vv2tKiY9Otf7TO_bw&s"
+            alt="Marie Curie in her laboratory" loading="lazy" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Marie Curie — Double Nobel Laureate, 1903 &amp; 1911</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony">
+          <img
+            src="https://static01.nyt.com/images/2026/01/15/multimedia/15int-nobel-worth-01-tbvj/15int-nobel-worth-01-tbvj-googleFourByThree.jpg"
+            alt="Nobel Prize medal" loading="lazy" style="background:#f5f0e8;object-fit:contain;padding:1.5rem;" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">The Nobel Prize Medal — Gold, 18-karat</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="scientists">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEK58-K21xSA_y6l9I1n0LJ40Ucm6rZp7Gmw&s"
+            alt="Sir Alexander Fleming" loading="lazy" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Sir Alexander Fleming — Discoverer of Penicillin</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="scientists">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC63H5l7ZgehZTHP8pNzvn4YmPZca85r3xMA&s"
+            alt="Nelson Mandela portrait" loading="lazy" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Nelson Mandela — Nobel Peace Prize Laureate, 1993</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="labs">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRbdHdx1-MnVFvIWfB3PppOpXN8puCd08CYw&s"
+            alt="Richard Feynman" loading="lazy" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Richard Feynman — Nobel Laureate, Physics 1965</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="ceremony">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkWNi08_OILBWoD0a5M_KAkERJq-b-UhbzTA&s"
+            alt="Nobel Prize Diploma" loading="lazy" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Nobel Prize Diploma — each one uniquely designed</p>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-category="labs">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJqQVnUyHwv5_Dd53UH2oxigeFkcglpKLaAg&s"
+            alt="Marie Curie in her laboratory" loading="lazy" />
+          <div class="gallery-overlay">
+            <p class="gallery-caption">Marie Curie working in her Paris laboratory</p>
+          </div>
+        </div>
+
+      </div><!-- /.gallery-grid -->
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ── -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" aria-label="Close image viewer">✕</button>
+    <img src="" alt="" />
+  </div>
+
+  <!-- ── VIDEOS SECTION ── -->
+  <section class="section section-alt" aria-labelledby="videos-heading">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Video Archive</span>
+        <h2 class="section-title" id="videos-heading">Nobel Prize Videos</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Documentaries and ceremony recordings from Nobel Prize history.</p>
+      </div>
+
+      <div class="video-grid stagger">
+
+        <div class="video-grid stagger">
+
+<div class="video-grid">
+
+  <!-- Video 1 -->
+  <div class="video-card">
+    <div class="video-thumb">
+      <iframe
+        src="https://www.youtube.com/embed/qqNEpXAPP7Q"
+        title="Nobel Prize Ceremony 2023"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-info">
+      <h4>Nobel Prize Ceremony 2023</h4>
+      <p>Annual award ceremony at Stockholm Concert Hall</p>
+    </div>
+  </div>
+
+  <!-- Video 2 -->
+  <div class="video-card">
+    <div class="video-thumb">
+      <iframe
+        src="https://www.youtube.com/embed/dwqebWhiwX4"
+        title="Einstein's Legacy Documentary"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-info">
+      <h4>Einstein's Legacy</h4>
+      <p>The theory of relativity and its lasting impact</p>
+    </div>
+  </div>
+
+  <!-- Video 3 -->
+  <div class="video-card">
+    <div class="video-thumb">
+      <iframe
+        src="https://www.youtube.com/embed/bAnnEiAjN6U"
+        title="Feynman Lectures"
+        allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-info">
+      <h4>The Feynman Lectures</h4>
+      <p>Classic physics lectures by Richard Feynman</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ANIMATED TIMELINE STRIP ── -->
+
+  <div id="footer-placeholder"></div>
+  <button class="back-top" aria-label="Back to top">↑</button>
+
+  <script src="js/components.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Gallery filter script -->
+  <script>
+    document.querySelectorAll('.gallery-filter').forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active state
+        document.querySelectorAll('.gallery-filter').forEach(b => {
+          b.style.background = 'transparent';
+          b.style.color = 'var(--text-main)';
+          b.style.borderColor = 'var(--cream-dark)';
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.style.background = 'var(--gold)';
+        btn.style.color = 'var(--navy)';
+        btn.style.borderColor = 'var(--gold)';
+        btn.setAttribute('aria-selected', 'true');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          const show = filter === 'all' || item.dataset.category === filter;
+          item.style.display = show ? 'block' : 'none';
+          item.style.opacity = show ? '1' : '0';
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

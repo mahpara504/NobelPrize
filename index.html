@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the lives and achievements of Nobel Prize winning scientists who changed history." />
+  <title>Nobel Prize Winners — University E-Project</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- Page transition overlay -->
+  <div id="page-overlay" class="active" aria-hidden="true"></div>
+
+  <!-- ── NAVIGATION (injected by components.js) ── -->
+  <div id="nav-placeholder"></div>
+
+  <!-- ================================================================
+       HERO — VIDEO BANNER
+       ================================================================ -->
+  <section class="video-banner" aria-label="Hero banner">
+    <!-- Background video (replace src with your actual video file) -->
+     <video src="video.mp4" width="500px" controls autoplay></video>
+
+
+
+     
+    <video
+      id="hero-video"
+      class="video-bg"
+      autoplay muted loop playsinline
+      poster="video.mp4"
+      aria-hidden="true"
+    >
+      <source src="video.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Animated star fallback (visible when video fails/loads) -->
+    <div class="video-fallback" aria-hidden="true">
+      <div class="stars"></div>
+    </div>
+
+    <!-- Dark overlay gradient -->
+    <div class="video-overlay" aria-hidden="true"></div>
+
+    <!-- Hero Content -->
+    <div class="video-content">
+      <div class="video-tag">
+        <span class="dot" aria-hidden="true"></span>
+        University E-Project — Nobel Prize Series
+      </div>
+
+      <h1 class="video-title">
+        Minds That<br><span>Changed the World</span>
+      </h1>
+
+      <p class="video-subtitle">
+        Discover the extraordinary lives, groundbreaking discoveries, and lasting legacies of Nobel Prize–winning scientists.
+      </p>
+
+      <div class="hero-cta">
+        <a href="about.html" class="btn btn-primary">
+          🏅 Explore the Prize
+        </a>
+        <button id="play-hero-video" class="btn btn-outline play-btn" title="Play video" aria-label="Play background video">
+          ▶
+        </button>
+        <a href="#scientists" class="btn btn-outline">
+          Meet the Scientists ↓
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       WELCOME SECTION
+       ================================================================ -->
+  <section class="section" id="welcome" aria-labelledby="welcome-heading">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+
+        <div class="reveal-left">
+          <span class="section-label">Welcome</span>
+          <h2 class="section-title" id="welcome-heading">
+            A Journey Through<br><em style="color:var(--gold-dark);font-style:normal;">Scientific Excellence</em>
+          </h2>
+          <div class="gold-line"></div>
+          <p style="color:var(--text-muted);margin-bottom:1.25rem;font-size:1.05rem;">
+            The Nobel Prize, established in 1901 by Alfred Nobel, stands as the world's most prestigious recognition of intellectual achievement. This e-project celebrates five remarkable individuals whose work reshaped our understanding of the universe, medicine, peace, and human potential.
+          </p>
+          <p style="color:var(--text-muted);margin-bottom:2rem;">
+            Navigate through each scientist's dedicated page to explore their biography, discover their Nobel Prize–winning contributions, and download related reading materials.
+          </p>
+          <a href="about.html" class="btn btn-primary">Learn About the Nobel Prize →</a>
+        </div>
+
+        <!-- Quick stats -->
+        <div class="reveal-right">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+            <div style="background:var(--navy);color:var(--white);border-radius:16px;padding:2rem;text-align:center;">
+              <div style="font-family:var(--font-display);font-size:3rem;font-weight:900;color:var(--gold);line-height:1;">
+                <span data-count="1000">0</span>+
+              </div>
+              <div style="font-size:.85rem;opacity:.7;margin-top:.4rem;">Nobel Laureates</div>
+            </div>
+            <div style="background:var(--gold);color:var(--navy);border-radius:16px;padding:2rem;text-align:center;">
+              <div style="font-family:var(--font-display);font-size:3rem;font-weight:900;line-height:1;">
+                <span data-count="123">0</span>
+              </div>
+              <div style="font-size:.85rem;opacity:.7;margin-top:.4rem;">Years of History</div>
+            </div>
+            <div style="background:white;border:2px solid var(--cream-dark);border-radius:16px;padding:2rem;text-align:center;">
+              <div style="font-family:var(--font-display);font-size:3rem;font-weight:900;color:var(--navy-light);line-height:1;">
+                <span data-count="6">0</span>
+              </div>
+              <div style="font-size:.85rem;color:var(--text-muted);margin-top:.4rem;">Prize Categories</div>
+            </div>
+            <div style="background:var(--cream-dark);border-radius:16px;padding:2rem;text-align:center;">
+              <div style="font-family:var(--font-display);font-size:3rem;font-weight:900;color:var(--navy);line-height:1;">
+                <span data-count="5">0</span>
+              </div>
+              <div style="font-size:.85rem;color:var(--text-muted);margin-top:.4rem;">Scientists Profiled</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SCIENTISTS GRID
+       ================================================================ -->
+  <section class="section section-alt" id="scientists" aria-labelledby="scientists-heading">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Featured Profiles</span>
+        <h2 class="section-title" id="scientists-heading">Meet the Nobel Laureates</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">Five extraordinary individuals whose discoveries and leadership left an indelible mark on humanity.</p>
+      </div>
+
+      <div class="cards-grid stagger" style="margin-top:3rem;">
+
+        <!-- Einstein -->
+        <article class="scientist-card">
+          <div class="card-img-wrap">
+            <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/643165cc56d4cd001d205b3c.jpg"
+                 alt="Portrait of Albert Einstein" loading="lazy" />
+            <span class="card-badge">Physics</span>
+          </div>
+          <div class="card-body">
+            <p class="card-year">Nobel Prize — 1921</p>
+            <h3 class="card-name">Albert Einstein</h3>
+            <p class="card-desc">Awarded for his discovery of the law of the photoelectric effect, which revolutionised theoretical physics.</p>
+            <a href="scientist1.html" class="card-link">View Profile →</a>
+          </div>
+        </article>
+
+        <!-- Curie -->
+        <article class="scientist-card">
+          <div class="card-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIgBVb_7JRjaWKffPpXvMOi06LAe-sDcG8LA&s"
+                 alt="Portrait of Marie Curie" loading="lazy" />
+            <span class="card-badge">Chemistry</span>
+          </div>
+          <div class="card-body">
+            <p class="card-year">Nobel Prize — 1903 & 1911</p>
+            <h3 class="card-name">Marie Curie</h3>
+            <p class="card-desc">First person to win Nobel Prizes in two sciences. Pioneered research on radioactivity and discovered polonium and radium.</p>
+            <a href="scientist2.html" class="card-link">View Profile →</a>
+          </div>
+        </article>
+
+        <!-- Fleming -->
+        <article class="scientist-card">
+          <div class="card-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTacCS9eTzhr7nwcbalWHQeROZ1EhRZ4rWk-g&s"
+                 alt="Portrait of Alexander Fleming" loading="lazy" />
+            <span class="card-badge">Medicine</span>
+          </div>
+          <div class="card-body">
+            <p class="card-year">Nobel Prize — 1945</p>
+            <h3 class="card-name">Alexander Fleming</h3>
+            <p class="card-desc">Discovered penicillin in 1928, launching the age of antibiotics and saving hundreds of millions of lives.</p>
+            <a href="scientist3.html" class="card-link">View Profile →</a>
+          </div>
+        </article>
+
+        <!-- Mandela -->
+        <article class="scientist-card">
+          <div class="card-img-wrap">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPwBOZA1TRpEFXwPQymf8AQ6LGyB3-O_wRDg&s"
+                 alt="Portrait of Nelson Mandela" loading="lazy" />
+            <span class="card-badge">Peace</span>
+          </div>
+          <div class="card-body">
+            <p class="card-year">Nobel Prize — 1993</p>
+            <h3 class="card-name">Nelson Mandela</h3>
+            <p class="card-desc">Awarded for his peaceful struggle against apartheid and his role in transitioning South Africa to democracy.</p>
+            <a href="scientist4.html" class="card-link">View Profile →</a>
+          </div>
+        </article>
+
+        <!-- Feynman -->
+        <article class="scientist-card">
+          <div class="card-img-wrap">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiz7DeuUmHN7TiT3xf7cV7UPBJNDtEvjNZcgMmNElTmOJYaec6zQI0UiLU04jZP6hqkeLcrnaC5NP4WC_zRQzP3_QhLumNxyzPOsC-WEmWQyYsadq1Eg_V_jEjDfCdddeQgJjY_OOB1KLMj6o2ShA6ycHwM91I430Yr9tkYTn6759jDmcGAsONOACbi/w1200-h630-p-k-no-nu/richard%20feynman%20quotes%20atheism%20religion%20science.png"
+                 alt="Portrait of Richard Feynman" loading="lazy" />
+            <span class="card-badge">Physics</span>
+          </div>
+          <div class="card-body">
+            <p class="card-year">Nobel Prize — 1965</p>
+            <h3 class="card-name">Richard Feynman</h3>
+            <p class="card-desc">Recognised for fundamental work in quantum electrodynamics, reshaping our understanding of light-matter interaction.</p>
+            <a href="scientist5.html" class="card-link">View Profile →</a>
+          </div>
+        </article>
+
+      </div><!-- /.cards-grid -->
+    </div>
+  </section>
+
+  <!-- ================================================================
+       QUOTE / HIGHLIGHT BAND
+       ================================================================ -->
+  <section class="section section-dark" aria-label="Inspirational quote">
+    <div class="container container-sm text-center">
+      <div class="reveal">
+        <div style="font-size:4rem;margin-bottom:1rem;opacity:.3;font-family:Georgia,serif;">"</div>
+        <blockquote style="font-family:var(--font-display);font-size:clamp(1.3rem,3vw,2rem);font-weight:700;line-height:1.4;color:var(--white);margin-bottom:1.5rem;">
+          The important thing is not to stop questioning.<br>
+          <em style="color:var(--gold);">Curiosity has its own reason for existing.</em>
+        </blockquote>
+        <cite style="color:rgba(255,255,255,.6);font-size:.95rem;font-style:normal;">
+          — Albert Einstein, Nobel Laureate in Physics, 1921
+        </cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       QUICK LINKS
+       ================================================================ -->
+  <section class="section" aria-labelledby="explore-heading">
+    <div class="container">
+      <div class="text-center reveal" style="margin-bottom:2.5rem;">
+        <span class="section-label">Explore More</span>
+        <h2 class="section-title" id="explore-heading">What's in This Project</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;" class="stagger">
+        <a href="about.html" style="display:block;background:var(--white);border:1px solid var(--cream-dark);border-radius:14px;padding:2rem;text-align:center;transition:all .35s;text-decoration:none;" class="ql-card">
+          <div style="font-size:2.5rem;margin-bottom:.75rem;">🏅</div>
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:.4rem;">About the Prize</h3>
+          <p style="color:var(--text-muted);font-size:.875rem;">History & significance of the Nobel Prize</p>
+        </a>
+        <a href="gallery.html" style="display:block;background:var(--white);border:1px solid var(--cream-dark);border-radius:14px;padding:2rem;text-align:center;transition:all .35s;" class="ql-card">
+          <div style="font-size:2.5rem;margin-bottom:.75rem;">🖼️</div>
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:.4rem;">Gallery & Media</h3>
+          <p style="color:var(--text-muted);font-size:.875rem;">Photos, videos, and ceremony highlights</p>
+        </a>
+        <a href="contact.html" style="display:block;background:var(--white);border:1px solid var(--cream-dark);border-radius:14px;padding:2rem;text-align:center;transition:all .35s;" class="ql-card">
+          <div style="font-size:2.5rem;margin-bottom:.75rem;">📚</div>
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:.4rem;">References</h3>
+          <p style="color:var(--text-muted);font-size:.875rem;">Sources & academic references used</p>
+        </a>
+        <a href="downloads/book2.pdf" download data-download="Nobel Prize Overview" style="display:block;background:var(--navy);border:1px solid var(--navy-light);border-radius:14px;padding:2rem;text-align:center;transition:all .35s;" class="ql-card">
+          <div style="font-size:2.5rem;margin-bottom:.75rem;">📥</div>
+          <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:.4rem;color:var(--white);">Download Materials</h3>
+          <p style="color:rgba(255,255,255,.5);font-size:.875rem;">Books and articles for each laureate</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Back-to-top button -->
+  <button class="back-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="js/components.js"></script>
+  <script src="js/script.js"></script>
+
+  <!-- Quick-link hover style (inline, no extra file needed) -->
+  <style>
+    .ql-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--gold) !important;
+    }
+  </style>
+</body>
+</html>

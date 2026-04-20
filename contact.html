@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact us and view references for the Nobel Prize Winners E-Project." />
+  <title>Contact & References — Nobel Prize E-Project</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <div id="page-overlay" class="active" aria-hidden="true"></div>
+  <div id="nav-placeholder"></div>
+
+  <!-- ── PAGE HERO ── -->
+  <header class="page-hero" aria-label="Page header">
+    <div class="hero-particles" aria-hidden="true"></div>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span style="color:rgba(255,255,255,.7);">Contact</span>
+    </div>
+    <div class="page-hero-tag">✉️ Get in Touch</div>
+    <h1>Contact <em>&amp; References</em></h1>
+    <p>Questions about this e-project? Send a message or explore the academic sources used.</p>
+  </header>
+
+  <!-- ── CONTACT SECTION ── -->
+  <section class="section" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Info -->
+        <div class="reveal-left">
+          <h2 class="section-title" id="contact-heading">Send a Message</h2>
+          <div class="gold-line"></div>
+          <p style="color:var(--text-muted);margin-bottom:2rem;">
+            This e-project was developed as part of institute .If you have questions, feedback, or would like to collaborate, feel free to reach out.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">🎓</div>
+            <div class="contact-item-text">
+              <strong>University</strong>
+              <span>Department of Science &amp; Technology</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📚</div>
+            <div class="contact-item-text">
+              <strong>Course</strong>
+              <span>History of Science &amp; Nobel Prize Studies</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📧</div>
+            <div class="contact-item-text">
+              <strong>Email</strong>
+              <span>student@university.edu</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">🌐</div>
+            <div class="contact-item-text">
+              <strong>Official Source</strong>
+              <span><a href="https://www.nobelprize.org" target="_blank" rel="noopener" style="color:var(--gold-dark);">nobelprize.org ↗</a></span>
+            </div>
+          </div>
+
+          <!-- Disclaimer box -->
+          <div style="background:var(--cream-dark);border-radius:12px;padding:1.5rem;margin-top:2rem;">
+            <p style="font-size:.875rem;color:var(--text-muted);">
+              ⚠️ <strong>Academic Use Notice:</strong> This website is a university e-project created for educational purposes only. All biographical content is sourced from public domain and openly licensed resources. Images are credited to Wikimedia Commons.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="reveal-right">
+          <div class="contact-form">
+            <h3 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1.5rem;">
+              📬 Contact Form
+            </h3>
+
+            <form id="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="fname">First Name *</label>
+                  <input type="text" id="fname" name="fname" placeholder="Your first name" required autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <label for="lname">Last Name *</label>
+                  <input type="text" id="lname" name="lname" placeholder="Your last name" required autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                  <option value="">— Select a topic —</option>
+                  <option value="feedback">Project Feedback</option>
+                  <option value="question">General Question</option>
+                  <option value="collaboration">Collaboration</option>
+                  <option value="source">Source / Citation Query</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Write your message here…" required minlength="20"></textarea>
+                <p class="form-note">Minimum 20 characters.</p>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem;">
+                ✉️ Send Message
+              </button>
+            </form>
+
+            <!-- Success State -->
+            <div id="form-success" class="success-msg" aria-live="polite">
+              <div class="success-icon" aria-hidden="true">✅</div>
+              <h4 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:.5rem;">Message Sent!</h4>
+              <p style="color:var(--text-muted);">Thank you for reaching out. We'll get back to you as soon as possible.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REFERENCES ── -->
+  <section class="section section-alt" id="references" aria-labelledby="ref-heading">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Academic Sources</span>
+        <h2 class="section-title" id="ref-heading">References &amp; Bibliography</h2>
+        <div class="gold-line"></div>
+        <p class="section-desc">All content in this e-project is based on reputable academic and public domain sources.</p>
+      </div>
+
+      <ol class="references-list reveal">
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>The Nobel Prize — Official Website</strong>
+            "Nobel Prize History and Laureates." Nobel Media AB, 2024.
+            <br><a href="https://www.nobelprize.org" target="_blank" rel="noopener">www.nobelprize.org ↗</a>
+          </div>
+        </li>
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>Einstein, Albert.</strong>
+            <em>Relativity: The Special and the General Theory.</em> Methuen &amp; Co. Ltd., 1916. (Public Domain)
+            <br><a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank" rel="noopener">Wikipedia: Albert Einstein ↗</a>
+          </div>
+        </li>
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>Curie, Marie.</strong>
+            <em>Pierre Curie.</em> MacMillan, 1923. Translated by C. &amp; V. Kellogg. (Public Domain)
+            <br><a href="https://en.wikipedia.org/wiki/Marie_Curie" target="_blank" rel="noopener">Wikipedia: Marie Curie ↗</a>
+          </div>
+        </li>
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>Fleming, Alexander.</strong>
+            "On the Antibacterial Action of Cultures of a Penicillium."
+            <em>British Journal of Experimental Pathology,</em> 10(3): 226–236, 1929.
+            <br><a href="https://en.wikipedia.org/wiki/Alexander_Fleming" target="_blank" rel="noopener">Wikipedia: Alexander Fleming ↗</a>
+          </div>
+        </li>
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>Mandela, Nelson.</strong>
+            <em>Long Walk to Freedom.</em> Little, Brown &amp; Company, 1994.
+            <br><a href="https://en.wikipedia.org/wiki/Nelson_Mandela" target="_blank" rel="noopener">Wikipedia: Nelson Mandela ↗</a>
+          </div>
+        </li>
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>Feynman, Richard P.</strong>
+            <em>The Feynman Lectures on Physics.</em> Addison-Wesley, 1964.
+            <br><a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank" rel="noopener">Wikipedia: Richard Feynman ↗</a>
+          </div>
+        </li>
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>Wikimedia Commons</strong>
+            All photographic portraits used are licensed under Creative Commons or are in the Public Domain.
+            <br><a href="https://commons.wikimedia.org" target="_blank" rel="noopener">commons.wikimedia.org ↗</a>
+          </div>
+        </li>
+
+        <li class="ref-item">
+          <div class="ref-num"></div>
+          <div class="ref-text">
+            <strong>Encyclopaedia Britannica</strong>
+            Various entries on Nobel Prize laureates. Encyclopaedia Britannica, Inc., 2024.
+            <br><a href="https://www.britannica.com" target="_blank" rel="noopener">www.britannica.com ↗</a>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <button class="back-top" aria-label="Back to top">↑</button>
+
+  <script src="js/components.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
